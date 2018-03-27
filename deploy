@@ -1,0 +1,9 @@
+-#!/bin/sh
+ssh ubuntu@ip-172-31-88-237 <<EOF
+cd ~/nodeservices_prod/USecurity
+git pull
+npm install
+npm run tsc
+pm2 restart all
+exit
+EOF
